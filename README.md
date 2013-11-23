@@ -129,6 +129,14 @@ application.get_profile(selectors=['id', 'first-name', 'last-name', 'location', 
  u'numConnections': 13}
 ```
 
+linkedin API returns also the profile picture, which is of fixed size - 80x80. However sometimes it is useful to have the picture, originally uploaded and cropped by the user.
+
+```python
+application.get_picture_urls()
+{u'_total': 1, u'values': [u'http://m.c.lnkd.licdn.com/mpr/mprx/0_0fkZG6Udboth7s-sspenbFkdbumh7ROsUOVzXbEF74fiIVuqJ0LNQT--V3H']}
+```
+
+
 ## Connections API
 The Connections API returns a list of **1st degree** connections for a user who has granted access to their account. For more information, you check out its [documentation](http://developers.linkedin.com/documents/connections-api).
 
